@@ -44,8 +44,8 @@ app.use((req, res, next) => { // for all routes
     next(); // keep going
   });
 
-app.get(`/food/:food`, (req, res) ={
-
+app.get(`/food/:food`, (req, res) => {
+    res.send(req.params.food);
 });
 
 

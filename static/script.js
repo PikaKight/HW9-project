@@ -17,6 +17,7 @@ const StorageCtrl = (function () {
           localStorage.setItem("items", JSON.stringify(items));
         }
       },
+      
       getItemFromStorage: function () {
         let items;
         if (localStorage.getItem("items") === null) {
@@ -26,6 +27,7 @@ const StorageCtrl = (function () {
         }
         return items;
       },
+
       updateItemStorage: function (updatedItem) {
         let items = JSON.parse(localStorage.getItem("items"));
         items.forEach((item, index) => {
@@ -35,6 +37,7 @@ const StorageCtrl = (function () {
         });
         localStorage.setItem("items", JSON.stringify(items));
       },
+
       deleteItemStorage: function (itemToDeleteID) {
         let items = JSON.parse(localStorage.getItem("items"));
         items.forEach((item, index) => {
@@ -44,6 +47,7 @@ const StorageCtrl = (function () {
         });
         localStorage.setItem("items", JSON.stringify(items));
       },
+
       removeAllItems: function () {
         localStorage.removeItem("items");
       },

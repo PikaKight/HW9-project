@@ -8,6 +8,7 @@
 }
 
 body{
+  
     height: 100vh;
     overflow: hidden;
     background-image: url("https://images.unsplash.com/photo-1486371834297-a8195e31b251?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80");
@@ -63,9 +64,13 @@ body{
     width: 100%;
 }
 
+h3{
+  color: black;
+}
 
-
-
+.labels{
+  color: black;
+}
 
 
 /* OLD CSS */
