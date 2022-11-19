@@ -16,7 +16,12 @@ function searchStringFunction() {
     input.value = input.value.replace(regex,"");
   
     // filtering for search results
-    var filter = input.value.toLowerCase();
+    var filter = input.value.toUpperCase();
     
+    fetch(`localhost:3000/food/${filter}`)
+        .then((res) => {
+            console.log(res)
+        })
+
     
 }//end of function
