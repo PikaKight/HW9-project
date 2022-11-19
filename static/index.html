@@ -11,33 +11,27 @@
     
     <!--BODY-->
     <body>
-        <!--HTML title-->
-        <h1>Healthier is Wealthier!</h1>
-        
-        <!--DIV section for search bars and page navigation-->
-        <div class ="searchBoxes">
-            <button type="button" href = #calories >Click Me!</button>
-            <button type="button" >Click Me!</button>
 
-            <a class = "active" href="./index.html">Homepage</a>
-            <a class="inactive" href="./stats.html">Check Statistics</a>
-
-            <div class="forms">
-                <form oninput=" result.value = myResults()">  
-                    <!--user input for diet/meal intake-->
-                      <input type="text" id = "myInputString" onkeyup="searchStringFunction()" title= "Enter meal items" placeholder="What's going in ?">  
-                      <input type="text" id = "myInputString2" onkeyup="myFunctionString()" title= "Enter abritrary amount" placeholder="How much going in ?"> 
-                      <output name="result" title ="What's REALLY going in !"><result class="value"></result></output>  
-                </form>
-            </div>  
+    <div class="glass-view">
+        <div class="header">
+            <h1> FoodTracker Application </h1>
+            <div class="nav">
+                <a href="#" class="nav-item">Home</a>
+                <a href="#" class="nav-item">Body Mass Index</a>
+                <a href="#" class="nav-item">Caloric Tracker</a>
+            </div>
         </div>
 
-
-     
-        
-            <!--references linked on homepage with respective titles-->
-     <a href =  >placeholder links </a> <br>
-     <a href =  >placeholder links </a> <br>
+        <div class="content-container">
+            <div class="content">
+                <h2> Beautiful Design </h2>
+                <p> Image Description </p>
+            </div>
+            <div class="img-container">
+                <img src="../image.svg" alt="alt-image">
+            </div>
+        </div>
+    </div>
 
      <!--linking the external scripts file for javascript functionality (search function)-->
     <script src ="script.js"></script>
