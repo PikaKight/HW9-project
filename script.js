@@ -1,6 +1,10 @@
+//test array database for food items - ignore test values, can replace with other thing or average numeric values, or if we want to use a database instead of kaggle or smth
+var foodInfo = ["#1, chicken, type: breast, protein: 20g, fat: 9g",
+                         "#2, beef, type: n/a, protein: 23, fat: 3g"] ;
+
 //result function
 function myResults (){
-    return ("test");
+    return ("");
 }
 
 //enter via string
@@ -13,6 +17,6 @@ function searchStringFunction() {
   
     // filtering for search results
     var filter = input.value.toLowerCase();
-  
-  
-  }//end of function
+    
+    
+}//end of function
