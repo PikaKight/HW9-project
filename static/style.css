@@ -1,20 +1,74 @@
+/* NEW CSS FOR GLASS CASE */
+@import url('https://fonts.cdnfonts.com/css/segoe-ui-4');
 
-body{
-    /*default background solid colour for browsers that don't support linear gradient*/
-    background:#a7d6f0;
-    background: linear-gradient(to right, #92e6e0,#89df9a);
-    font-family: 'Lucida Grande ',monospace;
-    font-size: small;
-    text-align: justify;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  
+*{
+    box-sizing: border-box;
     margin: 0;
-
+    padding: 0;
 }
 
+body{
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("https://images.unsplash.com/photo-1486371834297-a8195e31b251?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: "Segoe UI",sans-serif;
+}
+
+.glass-view{
+    margin: 50px;
+    padding: 30px;
+    background-color: #ffffff30;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    height: 90%;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav a{
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}
+
+.nav a:hover{
+    text-decoration: underline;
+}
+
+.content-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: inherit;
+    padding: 0 20px;
+}
+
+.content h2{
+    font-size: 2rem;
+}
+.content p{
+    max-width: 500px;
+}
+.img-container{
+    max-width: 500px;
+}
+.img-container img{
+    width: 100%;
+}
+
+
+
+
+
+
+/* OLD CSS */
 /* Add a black background color to the top navigation bar */
 .searchBoxes {
     overflow: hidden;
