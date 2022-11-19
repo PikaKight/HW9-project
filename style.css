@@ -26,7 +26,7 @@ body{
   /* Style the links inside the navigation bar */
   .searchBoxes a {
     float: left;
-    display: flex;
+    display: block;
     color: black;
     text-align: center;
     padding: 14px 16px;
@@ -60,14 +60,7 @@ body{
     font-size: 17px;
   }
 
-  .searchBoxes #myInputString2 {
-    float: right;
-    padding: 6px;
-    border: none;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
-  }
+
 /*allows resizing the window while maintain text and functionality integrity*/
   @media screen and (max-width: 600px) {
     .searchBoxes a, .searchBoxes input[type=text] {

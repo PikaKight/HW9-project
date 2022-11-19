@@ -17,17 +17,42 @@
         
         <!--DIV section for search bars and page navigation-->
         <div class ="searchBoxes">
+            
+            <div class="header">
+                <a class="inactive" href="./index.html">Homepage</a>
+                <a class="active" href="./stats.html">Check Diet Statistics</a>
+            </div>
+
             <button type="button" class="click" href = #calories >Click Me!</button>
             <button type="button" class="click">Click Me!</button>
-            <a class="inactive" href="./index.html">Homepage</a>
-            <a class="active" href="./stats.html">Check Diet Statistics</a>
+            
+            <div class="inputs">
+                <h3>
+                    Please enter your body information!
+                </h3>
+                
+                <label>Body Weight</label>
+                <input type="number" class="myInputString" id="weight" title="Body Weight" placeholder="Enter in pounds">
+                <select>
+                    <option id="lb">lb</option>
+                    <option id="kg">kg</option>
+                </select>
 
-            <label>
-                enter body weight and height !
-            </label>
+                <br>
 
-            <input type="text" id = "myInputString" title= "Body Weight" placeholder="Enter in pounds">  
-            <input type="text" id = "myInputString" title= "Height" placeholder="Centimetres">  
+                <label>Height</label>
+                <input type="text" class="myInputString" id="height" title="Height" placeholder="Centimetres">  
+                <select>
+                    <option id="imperial">foot/inch</option>
+                    <option id="metric">cm</option>
+                </select>
+                
+                <br>
+
+                <label>Age</label>
+                <input type="number" class="myInputString" id="age" title="Age" placeholder="Age">  
+            
+            </div>
         </div>
      
         
