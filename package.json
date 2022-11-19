@@ -1,0 +1,23 @@
+{
+  "name": "hw9-project",
+  "version": "1.0.0",
+  "description": "This is the project for Hack Western 9",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PikaKight/HW9-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PikaKight/HW9-project/issues"
+  },
+  "homepage": "https://github.com/PikaKight/HW9-project#readme",
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "key-file-storage": "^2.0.3"
+  }
+}
