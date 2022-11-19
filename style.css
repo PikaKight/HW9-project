@@ -19,12 +19,14 @@ body{
 .searchBoxes {
     overflow: hidden;
     background-color: #e9e9e9;
+    margin: auto;
+    padding: 1%;
   }
   
   /* Style the links inside the navigation bar */
   .searchBoxes a {
     float: left;
-    display: block;
+    display: flex;
     color: black;
     text-align: center;
     padding: 14px 16px;
@@ -42,6 +44,10 @@ body{
   .searchBoxes a.active {
     background-color: #2196F3;
     color: white;
+  }
+
+  .searchBoxes a.inactive {
+    color: black;
   }
   
   /* Style the search box inside the navigation bar */
@@ -103,4 +109,6 @@ body{
         color: white;
       }
 
-
+.click{
+  margin: auto;
+}
