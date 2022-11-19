@@ -17,7 +17,7 @@ const StorageCtrl = (function () {
           localStorage.setItem("items", JSON.stringify(items));
         }
       },
-      
+
       getItemFromStorage: function () {
         let items;
         if (localStorage.getItem("items") === null) {
@@ -470,11 +470,28 @@ function searchStringFunction() {
   
     // filtering for search results
     var filter = input.value.toUpperCase();
-    
-    fetch(`localhost:3000/food/${filter}`)
-        .then((res) => {
-            console.log(res)
-        })
-
-    
+        
 }//end of function
+
+
+let food = document.getElementById('food');
+
+async function addOptions(){
+    await fetch('/food')
+    .then( (res) => {
+        return res.json()
+    })
+    .then(
+        (data) => {
+
+            data.forEach( (x) => {
+                let opt = document.createElement('option');
+                opt.value = x.name;
+
+                food.appendChild(opt)
+            })
+
+        })
+}
+
+addOptions();

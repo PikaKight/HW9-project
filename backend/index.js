@@ -44,6 +44,22 @@ app.use((req, res, next) => { // for all routes
     next(); // keep going
   });
 
+
+const test = [
+    {
+        "name": "BUTTER,WITH SALT",
+        "calo": 717
+    }, 
+    {
+        "name": "CHEESE,CAMEMBERT",
+        "calo": 300
+    }
+] 
+
+app.get(`/food`, (req, res) => {
+    res.send(test);
+});
+
 app.get(`/food/:food`, (req, res) => {
     res.send(req.params.food);
 });
