@@ -189,7 +189,7 @@ const StorageCtrl = (function () {
       addListItem(item) {
         const li = document.createElement("li");
         li.className = "collection-item";
-        li.id = `item-${item.id}`;
+        li.id = `item:${item.id}`;
         li.innerHTML = `
         <strong>${item.name}</strong> - <em>${item.calories} calories</em>
         <a href=3"" class="secondary-content">
