@@ -1,0 +1,41 @@
+//import express module 
+const express = require('express');
+//create app object
+const app = express();
+
+
+
+//parse functionality for csv files and extraction
+const fs = require ('fs');
+const csv = require('csv-parser');
+
+//BACK-END STORAGE -  using key-file-storage npm package according to documentation
+const kfs = require("key-file-storage")('backend-storage');
+
+//define port number
+const port = 3000;
+
+//route object
+const router = express.Router();
+
+//parsing data as json format
+app.use(express.json());
+
+//empty arrays for parsed csv data values - REPLACE WITH WHAT WE USING
+const carbs = [], calories = []
+
+
+//functions used to parse data from CSV files - FOOD
+fs.createReadStream(__dirname + '/kaggle/food.csv')
+    .pipe(csv())
+        .on('data', (data) => {
+            carbs.push(data);
+        }).on('end', () => {
+
+          
+        });
+
+
+//setup serving front-end code
+app.use('/', express.static('static'));
+
