@@ -1,3 +1,4 @@
+
 body{
     /*default background solid colour for browsers that don't support linear gradient*/
     background:#a7d6f0;
@@ -44,7 +45,16 @@ body{
   }
   
   /* Style the search box inside the navigation bar */
-  .searchBoxes input[type=text] {
+  .searchBoxes #myInputString {
+    float: left;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+  }
+
+  .searchBoxes #myInputString2 {
     float: right;
     padding: 6px;
     border: none;
@@ -92,3 +102,5 @@ body{
         background-color: #4CAF50;
         color: white;
       }
+
+
