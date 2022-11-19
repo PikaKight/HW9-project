@@ -22,7 +22,7 @@ const router = express.Router();
 app.use(express.json());
 
 //empty arrays for parsed csv data values - REPLACE WITH WHAT WE USING
-const carbs = [], calories = []
+const carbs = [], calories = [], description = [], cholesterol = [], protein = [], lipid = []
 
 
 //functions used to parse data from CSV files - FOOD
