@@ -39,3 +39,18 @@ fs.createReadStream(__dirname + '/kaggle/food.csv')
 //setup serving front-end code
 app.use('/', express.static('static'));
 
+//middleware setup - logging
+app.use((req, res, next) => { // for all routes
+    console.log(req.method + ' request for ' + req.url);
+    //console.log('Request: ', req.method, ' Path: ', req.url, 'Time: ', Date.now());
+    next(); // keep going
+  });
+
+
+//install the router at /api/data - removes need for prefixes in other api calls
+app.use('/api/data', router);
+
+//notifies on server start
+app.listen(port, () =>{
+    console.log('Server started: listening on port ' + port);
+});
