@@ -486,7 +486,7 @@ async function addOptions(){
 
             data.forEach( (x) => {
                 let opt = document.createElement('option');
-                opt.value = x.name;
+                opt.value = x.foodName;
 
                 food.appendChild(opt)
             })
@@ -495,3 +495,28 @@ async function addOptions(){
 }
 
 addOptions();
+
+let inputFood = document.getElementById('item-name');
+
+let calos = document.getElementById('item-calories');
+
+inputFood.addEventListener('click', async (e) =>{
+
+  console.log(inputFood.value)
+  await fetch('/food/' + e.target.value)
+  .then((res) => {
+
+      console.log(res.json())
+      return 
+  })
+  .then(
+      (data) => {
+          data.forEach( (x) => {
+            calos.value = x.calo;
+          })
+
+      })
+  .catch((error) => {
+    console.log(error)
+  })
+})

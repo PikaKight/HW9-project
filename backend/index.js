@@ -22,15 +22,36 @@ app.use(express.json());
 //empty arrays for parsed csv data values - REPLACE WITH WHAT WE USING
 const carbs = [], calories = [], description = [], cholesterol = [], protein = [], lipid = []
 
+let foodDatas = []
 
 //functions used to parse data from CSV files - FOOD
 fs.createReadStream('kaggle/food.csv')
-    .pipe(csv())
+    .pipe(csv({
+            delimiter: ",",
+            columns: true,
+            group_columns_by_name: true,
+        }))
         .on('data', (data) => {
-            carbs.push(data);
+            // carbs.push(data);
+            foodDatas.push(data);
         }).on('end', () => {
+            foodData = foodDatas.map(({
+                Description: foodName,
+                Carbohydrate: carbs,
+                Cholesterol: cholesterol,
+                Kilocalories: calo,
+                Protein: protein,
+                TotalLipid: lipid
+            }) => ({
+                foodName,
+                carbs,
+                cholesterol,
+                calo,
+                protein,
+                lipid
+            }));
 
-          
+            foodDatas = foodData;
         });
 
 
@@ -45,23 +66,12 @@ app.use((req, res, next) => { // for all routes
   });
 
 
-const test = [
-    {
-        "name": "BUTTER,WITH SALT",
-        "calo": 717
-    }, 
-    {
-        "name": "CHEESE,CAMEMBERT",
-        "calo": 300
-    }
-] 
-
 app.get(`/food`, (req, res) => {
-    res.send(test);
+    res.send(foodDatas);
 });
 
 app.get(`/food/:food`, (req, res) => {
-    res.send(req.params.food);
+    res.send(foodDatas[req.params.food]);
 });
 
 
