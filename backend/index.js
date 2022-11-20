@@ -66,12 +66,16 @@ app.use((req, res, next) => { // for all routes
   });
 
 
-app.get(`/food`, (req, res) => {
+
+app.get('/food', (req, res) => {
     res.send(foodDatas);
 });
 
-app.get(`/food/:food`, (req, res) => {
-    res.send(foodDatas[req.params.food]);
+app.get('/food/:foodName', (req, res) => {
+
+    let result = foodDatas.filter(function(item) { return item.foodName === req.params.foodName; });
+
+    res.send(result);
 });
 
 

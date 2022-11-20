@@ -500,23 +500,22 @@ let inputFood = document.getElementById('item-name');
 
 let calos = document.getElementById('item-calories');
 
+console.log(calos);
+
 inputFood.addEventListener('click', async (e) =>{
 
-  console.log(inputFood.value)
-  await fetch('/food/' + e.target.value)
-  .then((res) => {
+  if (inputFood.value == ""){
+    return
+  }
 
-      console.log(res.json())
-      return 
+  await fetch(`/food/${inputFood.value}`)
+  .then((res) => {
+      result = res.json()
+      return result
   })
   .then(
       (data) => {
-          data.forEach( (x) => {
-            calos.value = x.calo;
+          console.log(data)
+          calos.value = data[0].calo;
           })
-
       })
-  .catch((error) => {
-    console.log(error)
-  })
-})
